@@ -75,6 +75,8 @@ client.on('messageCreate', (message) => {
 })
 ```
 
+![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/115a32c6-8f84-4e79-9b50-04e493f43cd1)
+
 This is, of course, not ideal—it's not accounting for capitalization or punctuation, sure, but there's another thing to keep in mind. When the bot sends a message, that also generates a messageCreate event! Because of this, I always put in an extra check for my messageCreate events to disregard messages from bots.
 
 ```js
