@@ -27,7 +27,7 @@ rest.put(
 
 If you run this script, it will send the list of commands (in this case, just the one) to Discord and register them to your bot. You should be able to go to Discord now and type **/hello** and see your bot appear as an option, like this:
 
-![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/d0761908-edbb-4d0e-b1b2-cf94fd65a6b5)
+![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/6b08eb61-cac6-45ec-bd2d-f793ab7784e3)
 
 There is sometimes a delay between registering a global command and having it show up in Discord. Sometimes, quitting out of Discord completely and relaunching the application will cause them to appear.
 
@@ -71,6 +71,6 @@ client.on('interactionCreate', (interaction) => {
 
 Now if we run our bot and try the /hello command...
 
-![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/e97f468f-2f71-49fb-8464-c3f393723407)
+![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/e2a2f646-b76d-4b54-9bd4-1bc65fff554f)
 
 Success! 🎉
