@@ -71,6 +71,6 @@ client.on('interactionCreate', (interaction) => {
 
 Now if we run our bot and try the /hello command...
 
-![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/e2a2f646-b76d-4b54-9bd4-1bc65fff554f)
+![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/df11b470-cfc6-4763-91ad-7b74a237245e)
 
 Success! 🎉
