@@ -83,11 +83,11 @@ module.exports = (interaction) => {
 }
 ```
 
-If you input that your birthday is January 10, then you should see this in response:
+If you input that your birthday is December 5, then you should see this in response:
 
-![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/ea0d1773-22d6-45ce-a57a-aae56ba7cdf6)
+![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/eb2065c4-85fb-4794-b89b-170f844aba8d)
 
-Remember, in JavaScript, 0 is January.
+Remember, in JavaScript, 0 is January, and 11 is December.
 
 Now, let's work on storing the data so we can retrieve it at our leisure for things like checking a user's birthday or announcing it on the day of. You can, of course, integrate with a database like MySQL or MongoDB. To keep things simple, we're going to use a library called **simple-json-db** that uses local JSON files as a database and is great for small projects.
 
@@ -125,7 +125,7 @@ Also, that reply—we don't really want to see something every time any user set
 
 And now when we run the command, we see this:
 
-![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/6ecd00e1-2850-4648-aae3-0646bfe3cc68)
+![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/e1034db1-285e-470c-84a9-6fd7545824ab)
 
 While we're here, let's make the response a little more user-friendly. For example...
 
@@ -140,7 +140,7 @@ While we're here, let's make the response a little more user-friendly. For examp
   })
 ```
 
-![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/c81d84ea-64d9-424d-8bf0-5ca2b3a1effa)
+![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/d65e8fd8-0b26-4b6a-b1a4-a48f2a85f1ae)
 
 All right! Now, let's put together a function to check another user's birthday.
 
@@ -196,7 +196,7 @@ module.exports = (interaction) => {
 }
 ```
 
-![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/925bdc84-2c5c-441b-82f3-dc1f552097d6)
+![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/141c1f42-814a-4a20-a95d-dcb2769fa8ed)
 
 I like to use the @user because it will do the logic of getting the user's correct display name (since there's "global" display names and "server" display names), and is a clickable target that you can action on if needed or wanted.
 
