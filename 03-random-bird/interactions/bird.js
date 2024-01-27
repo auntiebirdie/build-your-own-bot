@@ -2,7 +2,7 @@ const Chance = require('chance').Chance()
 const CSVParser = require('csv-parser')
 const FS = require('fs')
 
-module.exports = async (interaction) => {
+module.exports = (interaction) => {
   let allBirds = []
 
   FS.createReadStream('ebird_taxonomy.csv')
