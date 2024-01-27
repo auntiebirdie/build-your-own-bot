@@ -1,6 +1,27 @@
 Let's have a little fun and do something silly: how about a random bird command!
 
-There are a couple different bird checklists, but for this, we are going to use the Clements checklist because it's tied in with eBird.org.
+​Registering this command is straightforward:
+
+```js
+const Secrets = require('./secrets.json')
+const {
+  REST,
+  Routes
+} = require('discord.js')
+
+const rest = new REST().setToken(Secrets.DISCORD.BOT_TOKEN)
+
+rest.put(
+  Routes.applicationCommands(Secrets.DISCORD.APPLICATION_ID), {
+    body: [{
+      "name": "bird",
+      "description": "Fetch a random bird."
+    }]
+  }
+)
+```
+
+Now, there are a couple different bird checklists, but for this, we are going to use the Clements checklist because it's tied in with eBird.org.
 
 I grabbed the [CSV version of eBird taxonomy checklist from the Cornell website](https://www.birds.cornell.edu/clementschecklist/introduction/updateindex/october-2023/download/) via **curl**, installed the **unzip** package, and unzipped the file to get the CSV.
 
