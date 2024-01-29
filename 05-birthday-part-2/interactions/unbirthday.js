@@ -1,7 +1,7 @@
 const JSONdb = require('simple-json-db')
 
 module.exports = (interaction) => {
-  const db = new JSONdb(`db/${interaction.user.id}.json`)
+  const db = new JSONdb(`db/users/${interaction.user.id}.json`)
 
   db.set('birthday', null)
 
