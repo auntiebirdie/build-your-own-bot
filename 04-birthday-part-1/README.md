@@ -142,15 +142,35 @@ While we're here, let's make the response a little more user-friendly. For examp
 
 ![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/d65e8fd8-0b26-4b6a-b1a4-a48f2a85f1ae)
 
-All right! Now, let's put together a function to check another user's birthday.
+All right! Now, let's add a quick way for a user to unset their birthday if they want to.
 
 ```js
-    body: [{
-      "name": "birthday",
-      "description": "Set your birthday.",
-      "options": [{
-        /* ... */
-      }]
+    }, {
+      "name": "unbirthday",
+      "description": "Unset your birthday."
+    }]
+```
+
+The logic for this one is fairly simple. We're simply going to null out the birthday.
+
+```js
+const JSONdb = require('simple-json-db')
+
+module.exports = (interaction) => {
+  const db = new JSONdb(`db/${interaction.user.id}.json`)
+
+  db.set('birthday', null)
+
+  interaction.reply({
+    content: 'Your birthday has been unset.',
+    ephemeral: true
+  })
+}
+```
+
+Next, let's put together a function to check another user's birthday.
+
+```js
     }, {
       "name": "check",
       "description": "Check a user's birthday.",
