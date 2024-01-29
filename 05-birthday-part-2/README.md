@@ -9,15 +9,8 @@ First thing's first: we're going to need access to guild/server members, which i
 And update the intents array passed to the new Client:
 
 ```js
-const {
-  Client,
-  GatewayIntentBits
-} = require('discord.js')
-
-/* ... */
-
 const client = new Client({
-  intents: [GatewayIntentBits.GuildMembers]
+  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers]
 })
 ```
 
