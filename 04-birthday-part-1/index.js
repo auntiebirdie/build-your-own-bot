@@ -5,7 +5,7 @@ const {
 const Secrets = require('./secrets.json')
 
 const client = new Client({
-  intents: []
+  intents: [GatewayIntentBits.Guilds]
 })
 
 client.login(Secrets.DISCORD.BOT_TOKEN)

@@ -8,7 +8,7 @@ const JSONdb = require('simple-json-db')
 const Secrets = require('./secrets.json')
 
 const client = new Client({
-  intents: [GatewayIntentBits.GuildMembers]
+  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers]
 })
 
 client.login(Secrets.DISCORD.BOT_TOKEN)
