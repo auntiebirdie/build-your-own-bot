@@ -62,6 +62,9 @@ rest.put(
         "required": true
       }]
     }, {
+      "name": "unbirthday",
+      "description": "Unset your birthday."
+    }, {
       "name": "check",
       "description": "Check a user's birthday.",
       "options": [{
