@@ -8,6 +8,26 @@ This time, we're going to do something a bit more complex: a bot that users can 
 
 That may or may not seem like a lot—if it does, don't worry! The trick is to just take things one at a time and remember that you can always refactor what you've done if you find out you need to change something later.
 
+The first step is to create our index.js file with the Guilds intent, because we'll need it later on.
+
+```js
+const {
+  Client,
+  GatewayIntentBits
+} = require('discord.js')
+const Secrets = require('./secrets.json')
+
+const client = new Client({
+  intents: [GatewayIntentBits.Guilds]
+})
+
+client.login(Secrets.DISCORD.BOT_TOKEN)
+
+client.on('interactionCreate', (interaction) => {
+  require(`./interactions/${interaction.commandName}.js`)(interaction)
+})
+```
+
 Because date formats can vary by country, what we're going to do is have our slash command have input options for the day and month. Here's what this looks like for registering the command:
 
 ```js
