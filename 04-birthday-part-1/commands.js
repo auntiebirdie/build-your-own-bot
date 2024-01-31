@@ -11,6 +11,7 @@ rest.put(
     body: [{
       "name": "birthday",
       "description": "Set your birthday.",
+      "dm_permission": false,
       "options": [{
         "name": "month",
         "description": "Which month were you born?",
@@ -63,10 +64,12 @@ rest.put(
       }]
     }, {
       "name": "unbirthday",
-      "description": "Unset your birthday."
+      "description": "Unset your birthday.",
+      "dm_permission": false
     }, {
       "name": "check",
       "description": "Check a user's birthday.",
+      "dm_permission": false,
       "options": [{
         "name": "user",
         "description": "Whose birthday do you want to check?",
