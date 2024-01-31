@@ -37,6 +37,8 @@ You can also register guild/server-specific commands, which take effect immediat
   Routes.applicationGuildCommands(applicationId, guildId)
 ```
 
+By default, global commands are available in DMs with the bot. If you want to disable this, you can set the attribute **dm_permission** to **false** to disable its availability in DMs. Guild/server-specific commands will not be available within DMs.
+
 Whichever path you take, if you try to use the command, you'll receive *The application did not respond*... because we haven't told the bot what to do with slash commands yet.
 
 Like before, let's listen to the event (this time, interactionCreate) just log the interaction to see what's going on:
