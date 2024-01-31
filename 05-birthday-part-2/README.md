@@ -129,7 +129,7 @@ If you're not familiar with cron, then all you really need to know is that the f
 
 ​In this case, I want the bot to run through its check every hour, so I'm sitting it to '0 * * * *'.
 
-Now that we have all the code necessary to wish users a happy birthday, let's work on our configuration commands.
+Now that we have all the code necessary to wish users a happy birthday, let's work on our configuration commands. We're going to leverage a new attribute: default_member_permissions.  Setting this to 0 will disable the command for everyone except admins by default.
 
 ```js
     {
@@ -138,11 +138,15 @@ Now that we have all the code necessary to wish users a happy birthday, let's wo
       "options": [{
         "name": "channel",
         "description": "Configure birthday announcement channel.",
-        "type": 1
+        "type": 1,
+        "dm_permission": false,
+        "default_member_permissions": 0
       }, {
         "name": "time",
         "description": "Configure birthday announcement time.",
-        "type": 1
+        "type": 1,
+        "dm_permission": false,
+        "default_member_permissions": 0
       }]
     }
 ```
