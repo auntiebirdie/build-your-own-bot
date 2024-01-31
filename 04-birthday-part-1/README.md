@@ -28,7 +28,7 @@ client.on('interactionCreate', (interaction) => {
 })
 ```
 
-Because date formats can vary by country, what we're going to do is have our slash command have input options for the day and month. Let's also learn about a new attribute: **dm_permission**. We want the commands for this bot to only be executed from within a server, not in DMs, so we're going to set this to false.
+Because date formats can vary by country, what we're going to do is have our slash command have input options for the day and month. We want the commands for this bot to only be executed from within a server, not in DMs, so we're going to set **dm_permission** to false.
 
 Here's what this looks like for registering the command:
 
