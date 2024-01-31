@@ -499,12 +499,4 @@ client.on('ready', () => {
 
 ![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/6e9acf88-faea-4d27-a99b-33bc3fd545c4)
 
-There is only one final thing left to do. Currently anyone can use the /set command. In the Server Settings, there is an Integrations section. Under Bots & Apps, you should see your bot (or the Birthday bot if you use mine). Click on it to bring up the list of associated commands, then click on /set to configure the permissions for it.
-
-![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/bbd00510-3f0c-4659-b5f1-ba1c1e32ed91)
-
-Restrict it to just yourself, or to trusted members, or however works best for your situation. Save and now it should show Has Overrides, like this:
-
-![image](https://github.com/auntiebirdie/build-your-own-bot/assets/83483301/40dfdeff-7e79-4dfa-9117-29a6d09617fd)
-
-Now you should be all set (heh heh) and ready to celebrate some birthdays! 🎉
+Now you should be all set and ready to celebrate some birthdays! 🎉
