@@ -28,7 +28,9 @@ client.on('interactionCreate', (interaction) => {
 })
 ```
 
-Because date formats can vary by country, what we're going to do is have our slash command have input options for the day and month. Here's what this looks like for registering the command:
+Because date formats can vary by country, what we're going to do is have our slash command have input options for the day and month. Let's also learn about a new attribute: **dm_permission**. We want the commands for this bot to only be executed from within a server, not in DMs, so we're going to set this to false.
+
+Here's what this looks like for registering the command:
 
 ```js
 const Secrets = require('./secrets.json')
@@ -44,6 +46,7 @@ rest.put(
     body: [{
       "name": "birthday",
       "description": "Set your birthday.",
+      "dm_permission": false,
       "options": [{
         "name": "month",
         "description": "Which month were you born?",
@@ -167,7 +170,8 @@ All right! Now, let's add a quick way for a user to unset their birthday if they
 ```js
     }, {
       "name": "unbirthday",
-      "description": "Unset your birthday."
+      "description": "Unset your birthday.",
+      "dm_permission": false
     }]
 ```
 
@@ -194,6 +198,7 @@ Next, let's put together a function to check another user's birthday.
     }, {
       "name": "check",
       "description": "Check a user's birthday.",
+      "dm_permission": false,
       "options": [{
         "name": "user",
         "description": "Whose birthday do you want to check?",
